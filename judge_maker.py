@@ -30,6 +30,7 @@ class name:
 
         #
         else:
+
             if grade == "A" or grade == "B" or grade == "C":
 
                 result = 1
@@ -44,6 +45,9 @@ class name:
 
                 result = 3
                 return result
+
+            else:
+                raise Exception("graderにA～E以外の文字が入力されています")
 
 # points = [0,10,20,30,40,50,60,70,80,90]
 # judge = ["A","B","C","D","E"]

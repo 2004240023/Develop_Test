@@ -37,3 +37,8 @@ def test_make_judge_no5():
     test_object = name()
     result = test_object.make_judge('D', [30, 30, 30, 9, 100,100, 100, 100, 100, 60])
     assert result == 3
+
+def test_make_judge_no6():
+    test_object = name()
+    result = test_object.make_judge('F', [100, 100, 100, 100, 100,100, 100, 100, 100, 100])
+    assert result == 1
