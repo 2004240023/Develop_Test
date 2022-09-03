@@ -19,30 +19,30 @@ class name:
 
             if isout == True:
 
-                result = "3"
+                result = 3
                 return result
 
         #
         elif isretest == True:
 
-                result = "2"
+                result = 2
                 return result
 
         #
         else:
             if grade == "A" or grade == "B" or grade == "C":
 
-                result = "1"
+                result = 1
                 return result
 
             elif grade == "D":
 
-                result = "2"
+                result = 2
                 return result
 
             elif grade == "E":
 
-                result = "3"
+                result = 3
                 return result
 
 points = [0,10,20,30,40,50,60,70,80,90]
