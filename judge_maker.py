@@ -1,8 +1,3 @@
-from audioop import avg
-from typing import Tuple
-from unittest import result
-
-
 class name:
 
     def make_jedge(self, grade, points):
