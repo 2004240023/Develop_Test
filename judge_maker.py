@@ -45,9 +45,7 @@ class name:
                 result = 3
                 return result
 
-points = [0,10,20,30,40,50,60,70,80,90]
-judge = ["A","B","C","D","E"]
-grade = judge[0]
-
-
-print()
+# points = [0,10,20,30,40,50,60,70,80,90]
+# judge = ["A","B","C","D","E"]
+# grade = judge[0]
+# print()
