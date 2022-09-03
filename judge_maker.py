@@ -1,6 +1,6 @@
 class name:
 
-    def make_jedge(self, grade, points):
+    def make_judge(self, grade, points):
         
         isout = False   #不合格
         isretest = False    #再テスト
