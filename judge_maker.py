@@ -18,6 +18,7 @@ class name:
             if point <= 30:
                 count += 1
         
+        #
         if count >= 3:
             isretest = True
 
@@ -26,11 +27,13 @@ class name:
                 result = "3"
                 return result
 
+        #
         elif isretest == True:
 
                 result = "2"
                 return result
 
+        #
         else:
             if grade == "A" or grade == "B" or grade == "C":
 
