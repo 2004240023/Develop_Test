@@ -11,6 +11,7 @@ class name:
         isretest = False    #再テスト
         count = 0
 
+        #10点がないかチェックor30点以下が何回かチェック
         for point in points:
             if point < 10:
                 isout = True
