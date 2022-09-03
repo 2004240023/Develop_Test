@@ -15,4 +15,4 @@ jobs:
         pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pytest --cov=. --cov-report=html -v Python(.py)/test_judge_maker.py
+        pytest --cov=. --cov-report=html -v /Python/test_judge_maker.py
