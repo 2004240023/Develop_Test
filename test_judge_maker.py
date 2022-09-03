@@ -38,7 +38,14 @@ def test_make_judge_no5():
     result = test_object.make_judge('D', [30, 30, 30, 9, 100,100, 100, 100, 100, 60])
     assert result == 3
 
+
 def test_make_judge_no6():
-    test_object = name()
-    result = test_object.make_judge('F', [100, 100, 100, 100, 100,100, 100, 100, 100, 100])
-    assert result == 1
+    try:
+        test_object = name()
+        result = test_object.make_judge('F', [100, 100, 100, 100, 100,100, 100, 100, 100, 100])
+        assert False
+    except Exception as e:
+        assert e.args[0] == "graderにA～E以外の文字が入力されています"
+
+
+
