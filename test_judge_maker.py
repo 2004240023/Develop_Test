@@ -14,50 +14,26 @@ def test_make_judge_no1():
     #assertを使用して結果が正しいことを確認する
     assert result == 3
 
+#2　成績がAからC    30点以下の回数:3以上   10点より下:なし    再テスト:2
+def test_make_judge_no2():
+    test_object = name()
+    result = test_object.make_judge('A', [30, 30, 30, 100, 100,100, 100, 100, 100, 90])
+    assert result == 2
 
-"""
+#3　成績がAからC    30点以下の回数:1～2   10点より下:あり    不合格:3
+def test_make_judge_no3():
+    test_object = name()
+    result = test_object.make_judge('B', [30, 30, 9, 100, 100,100, 100, 100, 100, 80])
+    assert result == 3
 
-実行結果:一回目はインデントミスで失敗
-        二回目は修正後実行想定内の結果が帰ってきたため成功
-        
-(venv) root@605-14:~/Develop_Test# pytest test_judge_maker.py
-================================================= test session starts ==================================================
-platform linux -- Python 3.8.10, pytest-7.1.3, pluggy-1.0.0
-rootdir: /root/Develop_Test
-collected 1 item
+#4　成績がAからC    30点以下の回数:1～2   10点より下:なし    合格:1
+def test_make_judge_no4():
+    test_object = name()
+    result = test_object.make_judge('C', [30, 30, 100, 100, 100,100, 100, 100, 100, 70])
+    assert result == 1    
 
-test_judge_maker.py F                                                                                            [100%]
-
-======================================================= FAILURES =======================================================
-_________________________________________________ test_make_judge_no1 __________________________________________________
-
-    def test_make_judge_no1():
-
-        
-        マトリックスNo1 ←テストを行うマトリックスの番号
-        10点より下の点数がある場合 ←テストの内容
-        
-
-        #テスト関数の呼び出し
-        test_object = name()
-        result = test_object.make_judge('A', [9, 100, 100, 100, 100,100, 100, 100, 100, 100])
-
-        #assertを使用して結果が正しいことを確認する
->       assert result == 3
-E       assert 1 == 3
-
-test_judge_maker.py:15: AssertionError
-=============================================== short test summary info ================================================
-FAILED test_judge_maker.py::test_make_judge_no1 - assert 1 == 3
-================================================== 1 failed in 0.01s ===================================================
-(venv) root@605-14:~/Develop_Test# pytest test_judge_maker.py
-================================================= test session starts ==================================================
-platform linux -- Python 3.8.10, pytest-7.1.3, pluggy-1.0.0
-rootdir: /root/Develop_Test
-collected 1 item
-
-test_judge_maker.py .                                                                                            [100%]
-
-================================================== 1 passed in 0.00s ===================================================
-
-"""
+#5　成績がD    30点以下の回数:3以上   10点より下:あり    不合格:3
+def test_make_judge_no5():
+    test_object = name()
+    result = test_object.make_judge('D', [30, 30, 30, 9, 100,100, 100, 100, 100, 60])
+    assert result == 3
